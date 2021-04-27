@@ -1,10 +1,15 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import Cart from './components/Cart';
+import { Catalog } from './components/Catalog';
+import { store } from './stores';
 
 function App() {
   return (
-    <div>
-      <h1>Ola mundo!</h1>
-    </div>
+    <Provider store={store}>
+      <Catalog />
+      <Cart />
+    </Provider>
   );
 }
 
